@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StreamHub - Watch Movies Online</title>
+    <style>
+        /* CSS Styles */
+        :root {
+            --primary-color: #007bff; /* Changed from Netflix Red to Blue */
+            --bg-color: #141414;
+            --text-color: #ffffff;
+            --card-bg: #1f1f1f;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 4%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.7) 10%, rgba(0,0,0,0));
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-transform: uppercase;
+        }
+
+        .nav-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 14px;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 80vh;
+            background: linear-gradient(rgba(0,0,0,0.5), var(--bg-color)), url('https://via.placeholder.com/1920x1080');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 4%;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            padding: 10px 25px;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        /* Movie Grid */
+        .category {
+            padding: 20px 4%;
+        }
+
+        .category h2 {
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        .movie-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .movie-card {
+            background-color: var(--card-bg);
+            border-radius: 4px;
+            overflow: hidden;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        .movie-card:hover {
+            transform: scale(1.05);
+        }
+
+        .movie-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .movie-info {
+            padding: 10px;
+        }
+
+        .movie-title {
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        /* Footer */
+        footer {
+            padding: 40px 4%;
+            text-align: center;
+            color: #757575;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">StreamHub</div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">TV Shows</a>
+            <a href="#">Movies</a>
+            <a href="#">My List</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Unlimited Movies & TV Shows</h1>
+        <p>Watch anywhere. Cancel anytime. Ready to watch? Enter your email to create or restart your membership.</p>
+        <button class="btn btn-primary">Get Started</button>
+    </section>
+
+    <!-- Movie Categories -->
+    <section class="category">
+        <h2>Trending Now</h2>
+        <div class="movie-grid">
+            <!-- Movie Cards -->
+            <div class="movie-card">
+                <img src="https://via.placeholder.com/200x300" alt="Movie 1">
+                <div class="movie-info">
+                    <div class="movie-title">Action Hero</div>
+                </div>
+            </div>
+            <div class="movie-card">
+                <img src="https://via.placeholder.com/200x300" alt="Movie 2">
+                <div class="movie-info">
+                    <div class="movie-title">Sci-Fi World</div>
+                </div>
+            </div>
+            <div class="movie-card">
+                <img src="https://via.placeholder.com/200x300" alt="Movie 3">
+                <div class="movie-info">
+                    <div class="movie-title">Comedy Night</div>
+                </div>
+            </div>
+            <div class="movie-card">
+                <img src="https://via.placeholder.com/200x300" alt="Movie 4">
+                <div class="movie-info">
+                    <div class="movie-title">Drama Series</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 StreamHub Demo. For Educational Purposes Only.</p>
+    </footer>
+
+</body>
+</html>
